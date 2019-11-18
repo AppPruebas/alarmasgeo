@@ -5,7 +5,7 @@ if(Session::getUID()!="")
 }
 else 
 {
-    define('CRONOOSACCESS_KEY', '6Ld8abMUAAAAALMpQ44hk4oPvvAXcz1x_cZeBdqt');
+    define('CRONOOSACCESS_KEY', '6LelXcMUAAAAAGIDvouW-nCBVgegq-1aSu0WclFN');
 ?>
 <head>
     <title>Cronoos</title>
