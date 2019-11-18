@@ -1,0 +1,31 @@
+<style type="text/css">
+  #map {
+  height: 300px;
+  border: 1px solid #000;
+}
+</style>
+<div id="map"></div>
+<textarea name="textarea" rows="5" id="lat" class="form-control"></textarea>
+<script type="text/javascript">
+  window.onload = function() {
+    var latlng = new google.maps.LatLng(51.4975941, -0.0803232);
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: latlng,
+        zoom: 11,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title: 'Set lat/lon values for this property',
+        draggable: true
+    });
+    google.maps.event.addListener(marker, 'dragend', function(a) {
+        console.log(a);
+        var re = a.latLng.lat().toFixed(4) + ', ' + a.latLng.lng().toFixed(4);
+        document.getElementById('lat').innerHTML = re;
+    });
+};
+</script>
+<script async defer  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgQ6yoXCPKv4tbW6118IrXFidH0YZ4JUs&callback=initMap">
+</script>

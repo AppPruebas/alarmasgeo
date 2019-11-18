@@ -1,2 +1,2 @@
-# alarmasgeo
-georeferencias
+# CRONOOS
+Sistema de Geo referenciacion.
